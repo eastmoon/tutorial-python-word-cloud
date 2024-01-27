@@ -19,10 +19,9 @@ def getFrequencyDictForText(sentence):
         tmpDict[text.lower()] = val + 1
     return tmpDict
 
-
 def makeImage(text):
     # declare WordCloud
-    wc = WordCloud(background_color="white", max_words=1000)
+    wc = WordCloud(background_color="white", width=800, height=400, max_words=1000)
     # generate word cloud
     wc.generate_from_frequencies(text)
     # Export to an image
